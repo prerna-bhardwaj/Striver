@@ -10,6 +10,7 @@ NOTE : The digits are stored in reverse order, and each of their nodes contains 
 */
 
 public class addTwoNumbers {
+	// O(max(n1, n2) time | O(max(n1, n2) space
 	public static ListNode addTwoNumbers(ListNode l1,ListNode l2) {
 		ListNode start = new ListNode();
 		ListNode temp = start;
@@ -27,6 +28,7 @@ public class addTwoNumbers {
             if(l2 != null)  
                 l2 = l2.next;
         }
+        // NOTE : When adding 2 numbers, the carry values lies in {0, 1}.
         if(carry > 0)
             temp.next = new ListNode(carry);
         return start.next;
